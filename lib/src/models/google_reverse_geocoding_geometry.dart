@@ -42,6 +42,7 @@ class GoogleReverseGeocodingGeometry with _$GoogleReverseGeocodingGeometry {
     @JsonKey(name: 'location_type')
         required GoogleReverseGeocodingLocationType locationType,
     required GoogleReverseGeocodingGeometryViewport viewport,
+    required GoogleReverseGeocodingGeometryViewport? bounds,
   }) = _GoogleReverseGeocodingGeometry;
 
   /// {@macro from_json}

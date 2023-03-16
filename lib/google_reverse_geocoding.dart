@@ -2,3 +2,4 @@
 library google_reverse_geocoding;
 
 export 'src/google_reverse_geocoding.dart';
+export 'src/models/models.dart';

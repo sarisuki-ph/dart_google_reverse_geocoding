@@ -10,8 +10,8 @@ _$_GoogleReverseGeocodingAddressComponent
     _$$_GoogleReverseGeocodingAddressComponentFromJson(
             Map<String, dynamic> json) =>
         _$_GoogleReverseGeocodingAddressComponent(
-          longName: json['longName'] as String,
-          shortName: json['shortName'] as String,
+          longName: json['long_name'] as String,
+          shortName: json['short_name'] as String,
           types: (json['types'] as List<dynamic>)
               .map((e) => $enumDecode(
                   _$GoogleReverseGeocodingAddressComponentTypeEnumMap, e))
@@ -21,8 +21,8 @@ _$_GoogleReverseGeocodingAddressComponent
 Map<String, dynamic> _$$_GoogleReverseGeocodingAddressComponentToJson(
         _$_GoogleReverseGeocodingAddressComponent instance) =>
     <String, dynamic>{
-      'longName': instance.longName,
-      'shortName': instance.shortName,
+      'long_name': instance.longName,
+      'short_name': instance.shortName,
       'types': instance.types
           .map((e) => _$GoogleReverseGeocodingAddressComponentTypeEnumMap[e]!)
           .toList(),
@@ -51,6 +51,16 @@ const _$GoogleReverseGeocodingAddressComponentTypeEnumMap = {
   GoogleReverseGeocodingAddressComponentType.colloquialArea: 'colloquial_area',
   GoogleReverseGeocodingAddressComponentType.locality: 'locality',
   GoogleReverseGeocodingAddressComponentType.sublocality: 'sublocality',
+  GoogleReverseGeocodingAddressComponentType.sublocalityLevel1:
+      'sublocality_level_1',
+  GoogleReverseGeocodingAddressComponentType.sublocalityLevel2:
+      'sublocality_level_2',
+  GoogleReverseGeocodingAddressComponentType.sublocalityLevel3:
+      'sublocality_level_3',
+  GoogleReverseGeocodingAddressComponentType.sublocalityLevel4:
+      'sublocality_level_4',
+  GoogleReverseGeocodingAddressComponentType.sublocalityLevel5:
+      'sublocality_level_5',
   GoogleReverseGeocodingAddressComponentType.neighborhood: 'neighborhood',
   GoogleReverseGeocodingAddressComponentType.premise: 'premise',
   GoogleReverseGeocodingAddressComponentType.subpremise: 'subpremise',

@@ -24,12 +24,14 @@ GoogleReverseGeocodingAddressComponent
 mixin _$GoogleReverseGeocodingAddressComponent {
   /// the full text description or name of the address component
   /// as returned by the Geocoder.
+  @JsonKey(name: 'long_name')
   String get longName => throw _privateConstructorUsedError;
 
   /// is an abbreviated textual name for the address component, if available.
   /// For example, an address component for the state of Alaska may have a
   /// long_name of "Alaska" and a short_name of "AK"
   /// using the 2-letter postal abbreviation.
+  @JsonKey(name: 'short_name')
   String get shortName => throw _privateConstructorUsedError;
 
   /// An array indicating the type of the address component. See the list of (https://developers.google.com/maps/documentation/places/web-service/supported_types)[supported types].
@@ -52,8 +54,8 @@ abstract class $GoogleReverseGeocodingAddressComponentCopyWith<$Res> {
           GoogleReverseGeocodingAddressComponent>;
   @useResult
   $Res call(
-      {String longName,
-      String shortName,
+      {@JsonKey(name: 'long_name') String longName,
+      @JsonKey(name: 'short_name') String shortName,
       List<GoogleReverseGeocodingAddressComponentType> types});
 }
 
@@ -102,8 +104,8 @@ abstract class _$$_GoogleReverseGeocodingAddressComponentCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String longName,
-      String shortName,
+      {@JsonKey(name: 'long_name') String longName,
+      @JsonKey(name: 'short_name') String shortName,
       List<GoogleReverseGeocodingAddressComponentType> types});
 }
 
@@ -146,8 +148,8 @@ class __$$_GoogleReverseGeocodingAddressComponentCopyWithImpl<$Res>
 class _$_GoogleReverseGeocodingAddressComponent
     implements _GoogleReverseGeocodingAddressComponent {
   const _$_GoogleReverseGeocodingAddressComponent(
-      {required this.longName,
-      required this.shortName,
+      {@JsonKey(name: 'long_name') required this.longName,
+      @JsonKey(name: 'short_name') required this.shortName,
       required final List<GoogleReverseGeocodingAddressComponentType> types})
       : _types = types;
 
@@ -158,6 +160,7 @@ class _$_GoogleReverseGeocodingAddressComponent
   /// the full text description or name of the address component
   /// as returned by the Geocoder.
   @override
+  @JsonKey(name: 'long_name')
   final String longName;
 
   /// is an abbreviated textual name for the address component, if available.
@@ -165,6 +168,7 @@ class _$_GoogleReverseGeocodingAddressComponent
   /// long_name of "Alaska" and a short_name of "AK"
   /// using the 2-letter postal abbreviation.
   @override
+  @JsonKey(name: 'short_name')
   final String shortName;
 
   /// An array indicating the type of the address component. See the list of (https://developers.google.com/maps/documentation/places/web-service/supported_types)[supported types].
@@ -219,8 +223,8 @@ class _$_GoogleReverseGeocodingAddressComponent
 abstract class _GoogleReverseGeocodingAddressComponent
     implements GoogleReverseGeocodingAddressComponent {
   const factory _GoogleReverseGeocodingAddressComponent(
-      {required final String longName,
-      required final String shortName,
+      {@JsonKey(name: 'long_name') required final String longName,
+      @JsonKey(name: 'short_name') required final String shortName,
       required final List<GoogleReverseGeocodingAddressComponentType>
           types}) = _$_GoogleReverseGeocodingAddressComponent;
 
@@ -232,6 +236,7 @@ abstract class _GoogleReverseGeocodingAddressComponent
 
   /// the full text description or name of the address component
   /// as returned by the Geocoder.
+  @JsonKey(name: 'long_name')
   String get longName;
   @override
 
@@ -239,6 +244,7 @@ abstract class _GoogleReverseGeocodingAddressComponent
   /// For example, an address component for the state of Alaska may have a
   /// long_name of "Alaska" and a short_name of "AK"
   /// using the 2-letter postal abbreviation.
+  @JsonKey(name: 'short_name')
   String get shortName;
   @override
 

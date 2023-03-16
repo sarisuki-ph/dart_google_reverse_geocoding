@@ -1,8 +1,8 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:google_reverse_geocoding/src/models/google_reverse_geocoding_plus_code.dart';
 import 'package:google_reverse_geocoding/src/models/google_reverse_geocoding_response_status.dart';
+import 'package:google_reverse_geocoding/src/models/google_reverse_geocoding_result.dart';
 
 part 'google_reverse_geocoding_response.freezed.dart';
 part 'google_reverse_geocoding_response.g.dart';
@@ -17,21 +17,9 @@ class GoogleReverseGeocodingResponse with _$GoogleReverseGeocodingResponse {
     )
         required GoogleReverseGeocodingResponseStatus status,
 
-    /// formattedAddress
-    @JsonKey(name: 'formatted_address')
-        required String formattedAddress,
-
-    /// plusCode
-    @JsonKey(name: 'plus_code')
-        required GoogleReverseGeocodingPlusCode plusCode,
-
-    /// placeId
-    @JsonKey(name: 'place_id', defaultValue: '')
-        required String placeId,
-
-    /// types
-    @JsonKey(defaultValue: <String>[])
-        required List<String> types,
+    /// results
+    @JsonKey(defaultValue: <GoogleReverseGeocodingResult>[])
+        required List<GoogleReverseGeocodingResult> results,
 
     /// errorMessage
     @JsonKey(name: 'error_message')

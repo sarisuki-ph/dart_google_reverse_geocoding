@@ -28,6 +28,8 @@ mixin _$GoogleReverseGeocodingGeometry {
       throw _privateConstructorUsedError;
   GoogleReverseGeocodingGeometryViewport get viewport =>
       throw _privateConstructorUsedError;
+  GoogleReverseGeocodingGeometryViewport? get bounds =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -47,10 +49,12 @@ abstract class $GoogleReverseGeocodingGeometryCopyWith<$Res> {
       {GoogleReverseGeocodingLocation location,
       @JsonKey(name: 'location_type')
           GoogleReverseGeocodingLocationType locationType,
-      GoogleReverseGeocodingGeometryViewport viewport});
+      GoogleReverseGeocodingGeometryViewport viewport,
+      GoogleReverseGeocodingGeometryViewport? bounds});
 
   $GoogleReverseGeocodingLocationCopyWith<$Res> get location;
   $GoogleReverseGeocodingGeometryViewportCopyWith<$Res> get viewport;
+  $GoogleReverseGeocodingGeometryViewportCopyWith<$Res>? get bounds;
 }
 
 /// @nodoc
@@ -70,6 +74,7 @@ class _$GoogleReverseGeocodingGeometryCopyWithImpl<$Res,
     Object? location = null,
     Object? locationType = null,
     Object? viewport = null,
+    Object? bounds = freezed,
   }) {
     return _then(_value.copyWith(
       location: null == location
@@ -84,6 +89,10 @@ class _$GoogleReverseGeocodingGeometryCopyWithImpl<$Res,
           ? _value.viewport
           : viewport // ignore: cast_nullable_to_non_nullable
               as GoogleReverseGeocodingGeometryViewport,
+      bounds: freezed == bounds
+          ? _value.bounds
+          : bounds // ignore: cast_nullable_to_non_nullable
+              as GoogleReverseGeocodingGeometryViewport?,
     ) as $Val);
   }
 
@@ -104,6 +113,19 @@ class _$GoogleReverseGeocodingGeometryCopyWithImpl<$Res,
       return _then(_value.copyWith(viewport: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $GoogleReverseGeocodingGeometryViewportCopyWith<$Res>? get bounds {
+    if (_value.bounds == null) {
+      return null;
+    }
+
+    return $GoogleReverseGeocodingGeometryViewportCopyWith<$Res>(_value.bounds!,
+        (value) {
+      return _then(_value.copyWith(bounds: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -119,12 +141,15 @@ abstract class _$$_GoogleReverseGeocodingGeometryCopyWith<$Res>
       {GoogleReverseGeocodingLocation location,
       @JsonKey(name: 'location_type')
           GoogleReverseGeocodingLocationType locationType,
-      GoogleReverseGeocodingGeometryViewport viewport});
+      GoogleReverseGeocodingGeometryViewport viewport,
+      GoogleReverseGeocodingGeometryViewport? bounds});
 
   @override
   $GoogleReverseGeocodingLocationCopyWith<$Res> get location;
   @override
   $GoogleReverseGeocodingGeometryViewportCopyWith<$Res> get viewport;
+  @override
+  $GoogleReverseGeocodingGeometryViewportCopyWith<$Res>? get bounds;
 }
 
 /// @nodoc
@@ -143,6 +168,7 @@ class __$$_GoogleReverseGeocodingGeometryCopyWithImpl<$Res>
     Object? location = null,
     Object? locationType = null,
     Object? viewport = null,
+    Object? bounds = freezed,
   }) {
     return _then(_$_GoogleReverseGeocodingGeometry(
       location: null == location
@@ -157,6 +183,10 @@ class __$$_GoogleReverseGeocodingGeometryCopyWithImpl<$Res>
           ? _value.viewport
           : viewport // ignore: cast_nullable_to_non_nullable
               as GoogleReverseGeocodingGeometryViewport,
+      bounds: freezed == bounds
+          ? _value.bounds
+          : bounds // ignore: cast_nullable_to_non_nullable
+              as GoogleReverseGeocodingGeometryViewport?,
     ));
   }
 }
@@ -169,7 +199,8 @@ class _$_GoogleReverseGeocodingGeometry
   const _$_GoogleReverseGeocodingGeometry(
       {required this.location,
       @JsonKey(name: 'location_type') required this.locationType,
-      required this.viewport});
+      required this.viewport,
+      required this.bounds});
 
   factory _$_GoogleReverseGeocodingGeometry.fromJson(
           Map<String, dynamic> json) =>
@@ -182,10 +213,12 @@ class _$_GoogleReverseGeocodingGeometry
   final GoogleReverseGeocodingLocationType locationType;
   @override
   final GoogleReverseGeocodingGeometryViewport viewport;
+  @override
+  final GoogleReverseGeocodingGeometryViewport? bounds;
 
   @override
   String toString() {
-    return 'GoogleReverseGeocodingGeometry(location: $location, locationType: $locationType, viewport: $viewport)';
+    return 'GoogleReverseGeocodingGeometry(location: $location, locationType: $locationType, viewport: $viewport, bounds: $bounds)';
   }
 
   @override
@@ -198,13 +231,14 @@ class _$_GoogleReverseGeocodingGeometry
             (identical(other.locationType, locationType) ||
                 other.locationType == locationType) &&
             (identical(other.viewport, viewport) ||
-                other.viewport == viewport));
+                other.viewport == viewport) &&
+            (identical(other.bounds, bounds) || other.bounds == bounds));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, location, locationType, viewport);
+      Object.hash(runtimeType, location, locationType, viewport, bounds);
 
   @JsonKey(ignore: true)
   @override
@@ -227,7 +261,8 @@ abstract class _GoogleReverseGeocodingGeometry
           {required final GoogleReverseGeocodingLocation location,
           @JsonKey(name: 'location_type')
               required final GoogleReverseGeocodingLocationType locationType,
-          required final GoogleReverseGeocodingGeometryViewport viewport}) =
+          required final GoogleReverseGeocodingGeometryViewport viewport,
+          required final GoogleReverseGeocodingGeometryViewport? bounds}) =
       _$_GoogleReverseGeocodingGeometry;
 
   factory _GoogleReverseGeocodingGeometry.fromJson(Map<String, dynamic> json) =
@@ -240,6 +275,8 @@ abstract class _GoogleReverseGeocodingGeometry
   GoogleReverseGeocodingLocationType get locationType;
   @override
   GoogleReverseGeocodingGeometryViewport get viewport;
+  @override
+  GoogleReverseGeocodingGeometryViewport? get bounds;
   @override
   @JsonKey(ignore: true)
   _$$_GoogleReverseGeocodingGeometryCopyWith<_$_GoogleReverseGeocodingGeometry>

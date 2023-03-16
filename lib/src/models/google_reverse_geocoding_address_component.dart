@@ -1,3 +1,5 @@
+// ignore_for_file: invalid_annotation_target
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'google_reverse_geocoding_address_component.freezed.dart';
 part 'google_reverse_geocoding_address_component.g.dart';
@@ -82,6 +84,26 @@ enum GoogleReverseGeocodingAddressComponentType {
   /// Each sublocality level is a civil entity.
   /// Larger numbers indicate a smaller geographic area.
   sublocality,
+
+  /// sublocality_level_1 indicates a first-order civil entity below a locality.
+  @JsonValue('sublocality_level_1')
+  sublocalityLevel1,
+
+  /// sublocalityLevel2 indicates a second-order civil entity below a locality.
+  @JsonValue('sublocality_level_2')
+  sublocalityLevel2,
+
+  /// sublocalityLevel3 indicates a third-order civil entity below a locality.
+  @JsonValue('sublocality_level_3')
+  sublocalityLevel3,
+
+  /// sublocalityLevel4 indicates a fourth-order civil entity below a locality.
+  @JsonValue('sublocality_level_4')
+  sublocalityLevel4,
+
+  /// sublocalityLevel5 indicates a fifth-order civil entity below a locality.
+  @JsonValue('sublocality_level_5')
+  sublocalityLevel5,
 
   /// neighborhood indicates a named neighborhood
   neighborhood,
@@ -179,13 +201,13 @@ class GoogleReverseGeocodingAddressComponent
   const factory GoogleReverseGeocodingAddressComponent({
     /// the full text description or name of the address component
     /// as returned by the Geocoder.
-    required String longName,
+    @JsonKey(name: 'long_name') required String longName,
 
     /// is an abbreviated textual name for the address component, if available.
     /// For example, an address component for the state of Alaska may have a
     /// long_name of "Alaska" and a short_name of "AK"
     /// using the 2-letter postal abbreviation.
-    required String shortName,
+    @JsonKey(name: 'short_name') required String shortName,
 
     /// An array indicating the type of the address component. See the list of (https://developers.google.com/maps/documentation/places/web-service/supported_types)[supported types].
     required List<GoogleReverseGeocodingAddressComponentType> types,

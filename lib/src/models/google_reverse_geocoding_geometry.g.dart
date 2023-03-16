@@ -15,6 +15,10 @@ _$_GoogleReverseGeocodingGeometry _$$_GoogleReverseGeocodingGeometryFromJson(
           _$GoogleReverseGeocodingLocationTypeEnumMap, json['location_type']),
       viewport: GoogleReverseGeocodingGeometryViewport.fromJson(
           json['viewport'] as Map<String, dynamic>),
+      bounds: json['bounds'] == null
+          ? null
+          : GoogleReverseGeocodingGeometryViewport.fromJson(
+              json['bounds'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_GoogleReverseGeocodingGeometryToJson(
@@ -24,6 +28,7 @@ Map<String, dynamic> _$$_GoogleReverseGeocodingGeometryToJson(
       'location_type':
           _$GoogleReverseGeocodingLocationTypeEnumMap[instance.locationType]!,
       'viewport': instance.viewport.toJson(),
+      'bounds': instance.bounds?.toJson(),
     };
 
 const _$GoogleReverseGeocodingLocationTypeEnumMap = {

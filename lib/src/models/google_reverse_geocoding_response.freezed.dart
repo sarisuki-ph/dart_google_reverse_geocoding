@@ -25,22 +25,10 @@ mixin _$GoogleReverseGeocodingResponse {
   GoogleReverseGeocodingResponseStatus get status =>
       throw _privateConstructorUsedError;
 
-  /// formattedAddress
-  @JsonKey(name: 'formatted_address')
-  String get formattedAddress => throw _privateConstructorUsedError;
-
-  /// plusCode
-  @JsonKey(name: 'plus_code')
-  GoogleReverseGeocodingPlusCode get plusCode =>
+  /// results
+  @JsonKey(defaultValue: <GoogleReverseGeocodingResult>[])
+  List<GoogleReverseGeocodingResult> get results =>
       throw _privateConstructorUsedError;
-
-  /// placeId
-  @JsonKey(name: 'place_id', defaultValue: '')
-  String get placeId => throw _privateConstructorUsedError;
-
-  /// types
-  @JsonKey(defaultValue: <String>[])
-  List<String> get types => throw _privateConstructorUsedError;
 
   /// errorMessage
   @JsonKey(name: 'error_message')
@@ -66,18 +54,10 @@ abstract class $GoogleReverseGeocodingResponseCopyWith<$Res> {
               unknownEnumValue:
                   GoogleReverseGeocodingResponseStatus.unknownError)
               GoogleReverseGeocodingResponseStatus status,
-          @JsonKey(name: 'formatted_address')
-              String formattedAddress,
-          @JsonKey(name: 'plus_code')
-              GoogleReverseGeocodingPlusCode plusCode,
-          @JsonKey(name: 'place_id', defaultValue: '')
-              String placeId,
-          @JsonKey(defaultValue: <String>[])
-              List<String> types,
+          @JsonKey(defaultValue: <GoogleReverseGeocodingResult>[])
+              List<GoogleReverseGeocodingResult> results,
           @JsonKey(name: 'error_message')
               String? errorMessage});
-
-  $GoogleReverseGeocodingPlusCodeCopyWith<$Res> get plusCode;
 }
 
 /// @nodoc
@@ -95,10 +75,7 @@ class _$GoogleReverseGeocodingResponseCopyWithImpl<$Res,
   @override
   $Res call({
     Object? status = null,
-    Object? formattedAddress = null,
-    Object? plusCode = null,
-    Object? placeId = null,
-    Object? types = null,
+    Object? results = null,
     Object? errorMessage = freezed,
   }) {
     return _then(_value.copyWith(
@@ -106,36 +83,15 @@ class _$GoogleReverseGeocodingResponseCopyWithImpl<$Res,
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as GoogleReverseGeocodingResponseStatus,
-      formattedAddress: null == formattedAddress
-          ? _value.formattedAddress
-          : formattedAddress // ignore: cast_nullable_to_non_nullable
-              as String,
-      plusCode: null == plusCode
-          ? _value.plusCode
-          : plusCode // ignore: cast_nullable_to_non_nullable
-              as GoogleReverseGeocodingPlusCode,
-      placeId: null == placeId
-          ? _value.placeId
-          : placeId // ignore: cast_nullable_to_non_nullable
-              as String,
-      types: null == types
-          ? _value.types
-          : types // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+      results: null == results
+          ? _value.results
+          : results // ignore: cast_nullable_to_non_nullable
+              as List<GoogleReverseGeocodingResult>,
       errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $GoogleReverseGeocodingPlusCodeCopyWith<$Res> get plusCode {
-    return $GoogleReverseGeocodingPlusCodeCopyWith<$Res>(_value.plusCode,
-        (value) {
-      return _then(_value.copyWith(plusCode: value) as $Val);
-    });
   }
 }
 
@@ -154,19 +110,10 @@ abstract class _$$_GoogleReverseGeocodingResponseCopyWith<$Res>
               unknownEnumValue:
                   GoogleReverseGeocodingResponseStatus.unknownError)
               GoogleReverseGeocodingResponseStatus status,
-          @JsonKey(name: 'formatted_address')
-              String formattedAddress,
-          @JsonKey(name: 'plus_code')
-              GoogleReverseGeocodingPlusCode plusCode,
-          @JsonKey(name: 'place_id', defaultValue: '')
-              String placeId,
-          @JsonKey(defaultValue: <String>[])
-              List<String> types,
+          @JsonKey(defaultValue: <GoogleReverseGeocodingResult>[])
+              List<GoogleReverseGeocodingResult> results,
           @JsonKey(name: 'error_message')
               String? errorMessage});
-
-  @override
-  $GoogleReverseGeocodingPlusCodeCopyWith<$Res> get plusCode;
 }
 
 /// @nodoc
@@ -183,10 +130,7 @@ class __$$_GoogleReverseGeocodingResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object? status = null,
-    Object? formattedAddress = null,
-    Object? plusCode = null,
-    Object? placeId = null,
-    Object? types = null,
+    Object? results = null,
     Object? errorMessage = freezed,
   }) {
     return _then(_$_GoogleReverseGeocodingResponse(
@@ -194,22 +138,10 @@ class __$$_GoogleReverseGeocodingResponseCopyWithImpl<$Res>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as GoogleReverseGeocodingResponseStatus,
-      formattedAddress: null == formattedAddress
-          ? _value.formattedAddress
-          : formattedAddress // ignore: cast_nullable_to_non_nullable
-              as String,
-      plusCode: null == plusCode
-          ? _value.plusCode
-          : plusCode // ignore: cast_nullable_to_non_nullable
-              as GoogleReverseGeocodingPlusCode,
-      placeId: null == placeId
-          ? _value.placeId
-          : placeId // ignore: cast_nullable_to_non_nullable
-              as String,
-      types: null == types
-          ? _value._types
-          : types // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+      results: null == results
+          ? _value._results
+          : results // ignore: cast_nullable_to_non_nullable
+              as List<GoogleReverseGeocodingResult>,
       errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -225,17 +157,11 @@ class _$_GoogleReverseGeocodingResponse
   const _$_GoogleReverseGeocodingResponse(
       {@JsonKey(unknownEnumValue: GoogleReverseGeocodingResponseStatus.unknownError)
           required this.status,
-      @JsonKey(name: 'formatted_address')
-          required this.formattedAddress,
-      @JsonKey(name: 'plus_code')
-          required this.plusCode,
-      @JsonKey(name: 'place_id', defaultValue: '')
-          required this.placeId,
-      @JsonKey(defaultValue: <String>[])
-          required final List<String> types,
+      @JsonKey(defaultValue: <GoogleReverseGeocodingResult>[])
+          required final List<GoogleReverseGeocodingResult> results,
       @JsonKey(name: 'error_message')
           this.errorMessage})
-      : _types = types;
+      : _results = results;
 
   factory _$_GoogleReverseGeocodingResponse.fromJson(
           Map<String, dynamic> json) =>
@@ -245,31 +171,16 @@ class _$_GoogleReverseGeocodingResponse
   @JsonKey(unknownEnumValue: GoogleReverseGeocodingResponseStatus.unknownError)
   final GoogleReverseGeocodingResponseStatus status;
 
-  /// formattedAddress
-  @override
-  @JsonKey(name: 'formatted_address')
-  final String formattedAddress;
+  /// results
+  final List<GoogleReverseGeocodingResult> _results;
 
-  /// plusCode
+  /// results
   @override
-  @JsonKey(name: 'plus_code')
-  final GoogleReverseGeocodingPlusCode plusCode;
-
-  /// placeId
-  @override
-  @JsonKey(name: 'place_id', defaultValue: '')
-  final String placeId;
-
-  /// types
-  final List<String> _types;
-
-  /// types
-  @override
-  @JsonKey(defaultValue: <String>[])
-  List<String> get types {
-    if (_types is EqualUnmodifiableListView) return _types;
+  @JsonKey(defaultValue: <GoogleReverseGeocodingResult>[])
+  List<GoogleReverseGeocodingResult> get results {
+    if (_results is EqualUnmodifiableListView) return _results;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_types);
+    return EqualUnmodifiableListView(_results);
   }
 
   /// errorMessage
@@ -279,7 +190,7 @@ class _$_GoogleReverseGeocodingResponse
 
   @override
   String toString() {
-    return 'GoogleReverseGeocodingResponse(status: $status, formattedAddress: $formattedAddress, plusCode: $plusCode, placeId: $placeId, types: $types, errorMessage: $errorMessage)';
+    return 'GoogleReverseGeocodingResponse(status: $status, results: $results, errorMessage: $errorMessage)';
   }
 
   @override
@@ -288,26 +199,15 @@ class _$_GoogleReverseGeocodingResponse
         (other.runtimeType == runtimeType &&
             other is _$_GoogleReverseGeocodingResponse &&
             (identical(other.status, status) || other.status == status) &&
-            (identical(other.formattedAddress, formattedAddress) ||
-                other.formattedAddress == formattedAddress) &&
-            (identical(other.plusCode, plusCode) ||
-                other.plusCode == plusCode) &&
-            (identical(other.placeId, placeId) || other.placeId == placeId) &&
-            const DeepCollectionEquality().equals(other._types, _types) &&
+            const DeepCollectionEquality().equals(other._results, _results) &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      status,
-      formattedAddress,
-      plusCode,
-      placeId,
-      const DeepCollectionEquality().hash(_types),
-      errorMessage);
+  int get hashCode => Object.hash(runtimeType, status,
+      const DeepCollectionEquality().hash(_results), errorMessage);
 
   @JsonKey(ignore: true)
   @override
@@ -329,14 +229,8 @@ abstract class _GoogleReverseGeocodingResponse
   const factory _GoogleReverseGeocodingResponse(
       {@JsonKey(unknownEnumValue: GoogleReverseGeocodingResponseStatus.unknownError)
           required final GoogleReverseGeocodingResponseStatus status,
-      @JsonKey(name: 'formatted_address')
-          required final String formattedAddress,
-      @JsonKey(name: 'plus_code')
-          required final GoogleReverseGeocodingPlusCode plusCode,
-      @JsonKey(name: 'place_id', defaultValue: '')
-          required final String placeId,
-      @JsonKey(defaultValue: <String>[])
-          required final List<String> types,
+      @JsonKey(defaultValue: <GoogleReverseGeocodingResult>[])
+          required final List<GoogleReverseGeocodingResult> results,
       @JsonKey(name: 'error_message')
           final String? errorMessage}) = _$_GoogleReverseGeocodingResponse;
 
@@ -348,24 +242,9 @@ abstract class _GoogleReverseGeocodingResponse
   GoogleReverseGeocodingResponseStatus get status;
   @override
 
-  /// formattedAddress
-  @JsonKey(name: 'formatted_address')
-  String get formattedAddress;
-  @override
-
-  /// plusCode
-  @JsonKey(name: 'plus_code')
-  GoogleReverseGeocodingPlusCode get plusCode;
-  @override
-
-  /// placeId
-  @JsonKey(name: 'place_id', defaultValue: '')
-  String get placeId;
-  @override
-
-  /// types
-  @JsonKey(defaultValue: <String>[])
-  List<String> get types;
+  /// results
+  @JsonKey(defaultValue: <GoogleReverseGeocodingResult>[])
+  List<GoogleReverseGeocodingResult> get results;
   @override
 
   /// errorMessage
