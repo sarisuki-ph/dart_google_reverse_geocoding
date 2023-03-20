@@ -26,13 +26,13 @@ class GoogleReverseGeocodingFailure implements Exception {
 class GoogleReverseGeocoding {
   /// {@macro google_reverse_geocoding}
   GoogleReverseGeocoding({
-    required this.apiKey,
-  }) {
-    _apiUrl = 'https://maps.googleapis.com/maps/api/geocode/json?key=$apiKey';
+    required String apiKey,
+  }) : _apiKey = apiKey {
+    _apiUrl = 'https://maps.googleapis.com/maps/api/geocode/json?key=$_apiKey';
   }
 
   /// API Key for Google Reverse Geocoding
-  final String apiKey;
+  final String _apiKey;
   final _client = Dio();
   late final String _apiUrl;
 
