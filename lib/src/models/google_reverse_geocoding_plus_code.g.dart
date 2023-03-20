@@ -9,8 +9,8 @@ part of 'google_reverse_geocoding_plus_code.dart';
 _$_GoogleReverseGeocodingPlusCode _$$_GoogleReverseGeocodingPlusCodeFromJson(
         Map<String, dynamic> json) =>
     _$_GoogleReverseGeocodingPlusCode(
-      compoundCode: json['compoundCode'] as String,
-      globalCode: json['globalCode'] as String,
+      compoundCode: json['compoundCode'] as String?,
+      globalCode: json['globalCode'] as String?,
     );
 
 Map<String, dynamic> _$$_GoogleReverseGeocodingPlusCodeToJson(

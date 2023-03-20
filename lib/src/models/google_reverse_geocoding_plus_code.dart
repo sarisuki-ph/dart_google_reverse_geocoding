@@ -7,8 +7,8 @@ part 'google_reverse_geocoding_plus_code.freezed.dart';
 class GoogleReverseGeocodingPlusCode with _$GoogleReverseGeocodingPlusCode {
   /// {@macro google_reverse_geocoding_plus_code}
   const factory GoogleReverseGeocodingPlusCode({
-    required String compoundCode,
-    required String globalCode,
+    required String? compoundCode,
+    required String? globalCode,
   }) = _GoogleReverseGeocodingPlusCode;
 
   /// {@macro from_json}

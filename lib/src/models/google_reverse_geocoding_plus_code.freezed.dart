@@ -21,8 +21,8 @@ GoogleReverseGeocodingPlusCode _$GoogleReverseGeocodingPlusCodeFromJson(
 
 /// @nodoc
 mixin _$GoogleReverseGeocodingPlusCode {
-  String get compoundCode => throw _privateConstructorUsedError;
-  String get globalCode => throw _privateConstructorUsedError;
+  String? get compoundCode => throw _privateConstructorUsedError;
+  String? get globalCode => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,7 +38,7 @@ abstract class $GoogleReverseGeocodingPlusCodeCopyWith<$Res> {
       _$GoogleReverseGeocodingPlusCodeCopyWithImpl<$Res,
           GoogleReverseGeocodingPlusCode>;
   @useResult
-  $Res call({String compoundCode, String globalCode});
+  $Res call({String? compoundCode, String? globalCode});
 }
 
 /// @nodoc
@@ -55,18 +55,18 @@ class _$GoogleReverseGeocodingPlusCodeCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? compoundCode = null,
-    Object? globalCode = null,
+    Object? compoundCode = freezed,
+    Object? globalCode = freezed,
   }) {
     return _then(_value.copyWith(
-      compoundCode: null == compoundCode
+      compoundCode: freezed == compoundCode
           ? _value.compoundCode
           : compoundCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      globalCode: null == globalCode
+              as String?,
+      globalCode: freezed == globalCode
           ? _value.globalCode
           : globalCode // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -80,7 +80,7 @@ abstract class _$$_GoogleReverseGeocodingPlusCodeCopyWith<$Res>
       __$$_GoogleReverseGeocodingPlusCodeCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String compoundCode, String globalCode});
+  $Res call({String? compoundCode, String? globalCode});
 }
 
 /// @nodoc
@@ -96,18 +96,18 @@ class __$$_GoogleReverseGeocodingPlusCodeCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? compoundCode = null,
-    Object? globalCode = null,
+    Object? compoundCode = freezed,
+    Object? globalCode = freezed,
   }) {
     return _then(_$_GoogleReverseGeocodingPlusCode(
-      compoundCode: null == compoundCode
+      compoundCode: freezed == compoundCode
           ? _value.compoundCode
           : compoundCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      globalCode: null == globalCode
+              as String?,
+      globalCode: freezed == globalCode
           ? _value.globalCode
           : globalCode // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -124,9 +124,9 @@ class _$_GoogleReverseGeocodingPlusCode
       _$$_GoogleReverseGeocodingPlusCodeFromJson(json);
 
   @override
-  final String compoundCode;
+  final String? compoundCode;
   @override
-  final String globalCode;
+  final String? globalCode;
 
   @override
   String toString() {
@@ -166,16 +166,16 @@ class _$_GoogleReverseGeocodingPlusCode
 abstract class _GoogleReverseGeocodingPlusCode
     implements GoogleReverseGeocodingPlusCode {
   const factory _GoogleReverseGeocodingPlusCode(
-      {required final String compoundCode,
-      required final String globalCode}) = _$_GoogleReverseGeocodingPlusCode;
+      {required final String? compoundCode,
+      required final String? globalCode}) = _$_GoogleReverseGeocodingPlusCode;
 
   factory _GoogleReverseGeocodingPlusCode.fromJson(Map<String, dynamic> json) =
       _$_GoogleReverseGeocodingPlusCode.fromJson;
 
   @override
-  String get compoundCode;
+  String? get compoundCode;
   @override
-  String get globalCode;
+  String? get globalCode;
   @override
   @JsonKey(ignore: true)
   _$$_GoogleReverseGeocodingPlusCodeCopyWith<_$_GoogleReverseGeocodingPlusCode>

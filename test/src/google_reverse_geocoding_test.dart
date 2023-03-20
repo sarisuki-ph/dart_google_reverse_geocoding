@@ -13,5 +13,16 @@ void main() {
         isNotNull,
       );
     });
+    test('can reverse geocode', () async {
+      final googleReverseGeocoding = GoogleReverseGeocoding(
+        apiKey: 'API_KEY',
+      );
+      final result = await googleReverseGeocoding.reverseGeocode(
+        14.6972696,
+        121.0360918,
+        locationType: GoogleReverseGeocodingLocationType.roofTop,
+      );
+      expect(result, isNotNull);
+    });
   });
 }
